@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<title>파티 버프 계산기</title>
+<title>Calculadora de Buffs de Grupo</title>
 <style>
 body { font-family:'Segoe UI', sans-serif; margin:0; background:#f0f2f5; color:#333; display:flex; flex-direction:column; min-height:200vh; padding-bottom:220px; position:relative;}
 header { background:linear-gradient(135deg,#6a8cff,#b08aff); padding:25px; text-align:center; font-size:28px; font-weight:bold; color:white; letter-spacing:2px; box-shadow:0 4px 10px rgba(0,0,0,0.1);}
@@ -114,18 +114,18 @@ header { background:linear-gradient(135deg,#6a8cff,#b08aff); padding:25px; text-
 </style>
 </head>
 <body>
-<header>07.17 파티 시뮬레이터</header>
+<header>Simulador de Grupo 17/07</header>
 
 <div class="category-container">
-    <div class="category-btn active" data-filter="all">전체</div>
-    <div class="category-btn" data-filter="물공">물공</div>
-    <div class="category-btn" data-filter="마공">마공</div>
-    <div class="category-btn" data-filter="녹">녹힐</div>
+    <div class="category-btn active" data-filter="all">Todos</div>
+    <div class="category-btn" data-filter="물공">Ataque Físico</div>
+    <div class="category-btn" data-filter="마공">Ataque Mágico</div>
+    <div class="category-btn" data-filter="녹">Apoyo</div>
 </div>
 
 <div class="main-container">
     <div class="update-log-container">
-        <h3>업데이트 내역</h3>
+        <h3>Historial de Actualizaciones</h3>
         <div class="update-log-item">
             <div class="update-log-date">2025.08.23</div>
             <div class="update-log-content">- ui 디자인 개선</div>
@@ -139,25 +139,25 @@ header { background:linear-gradient(135deg,#6a8cff,#b08aff); padding:25px; text-
     <div class="container" id="character-container"></div>
 </div>
 <div class="cart">
-    <h2>선택한 캐릭터</h2>
+    <h2>Personajes Seleccionados</h2>
     <div class="cart-items" id="cart-items"></div>
 <div class="stats">
-    총 실뎀증: <span id="total-damage">약 0.00%(배)</span> | 
-    쿨가속: <span id="total-speed">1.00배</span> | 
-    쿨감: <span id="total-cd">0초</span> | 
-    마클쿨가속: <span id="total-mcl">1.00배</span> | 
-    하액쿨가속: <span id="total-hac">1.00배</span> | 
+    Daño total: <span id="total-damage">약 0.00%(배)</span> | 
+    Aceleración de Enfriamiento: <span id="total-speed">1.00배</span> | 
+    Reducción de Enfriamiento: <span id="total-cd">0초</span> | 
+    Aceleración de Maestría: <span id="total-mcl">1.00배</span> | 
+    Aceleración de Habilidad Hiperactiva: <span id="total-hac">1.00배</span> | 
     <span id="good-party"></span>
-    <span id="mix-warning" class="warning">물마 혼합 주의</span>
+    <span id="mix-warning" class="warning">Advertencia: Grupo mixto (Físico/Mágico)</span>
 </div>
 
     <div id="challenge-mode-container">
-        <label for="challenge-mode">도전모드</label>
+        <label for="challenge-mode">Modo Desafío</label>
         <input type="checkbox" id="challenge-mode">
-        <span>총 방어력 감소: <span id="total-defense-reduction">0.00%</span></span>
+        <span>Reducción total de Defensa: <span id="total-defense-reduction">0.00%</span></span>
     </div>
 
-    <button class="clear-btn" id="clear-cart">전체 제거</button>
+    <button class="clear-btn" id="clear-cart">Quitar todos</button>
 
 </div>
 <div id="tooltip" class="tooltip"></div>
